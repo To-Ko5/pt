@@ -49,5 +49,11 @@ body {
    font-size: 1.6rem;
    color: #333;
    font-weight: 500;
+   font-family: 'Noto Sans JP', sans-serif;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
 }
 </style>
