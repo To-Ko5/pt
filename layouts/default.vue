@@ -1,7 +1,9 @@
 <template>
   <div>
     <headerSection/>
-    <nuxt />
+    <div class="contents">
+      <nuxt />
+    </div>
   </div>
 </template>
 
@@ -16,7 +18,7 @@ export default {
 </script>
 
 <style lang="scss">
-html,body,h1,h2,h3,ul,li {
+html,body,h1,h2,h3,ul,li,p {
    margin: 0;
    padding: 0;
    line-height: 1.0;
@@ -27,6 +29,7 @@ ul {
 }
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 table {
@@ -48,6 +51,7 @@ html {
 body {
    font-size: 1.6rem;
    color: #333;
+   background: #fffefe;
    font-weight: 500;
    font-family: 'Noto Sans JP', sans-serif;
 }
@@ -55,5 +59,9 @@ body {
 .container {
   max-width: 960px;
   margin: 0 auto;
+}
+
+.contents {
+  padding-top: 92px;
 }
 </style>
