@@ -1,18 +1,22 @@
 <template>
   <div>
-    <headerSection/>
+    <headerSection />
     <div class="contents">
       <nuxt />
     </div>
+    <footerSection />
   </div>
 </template>
 
 
 <script>
-import header from '~/components/header.vue'
+import headerSection from '~/components/header.vue'
+import footerSection from '~/components/footer.vue'
+
 export default {
   components: {
-    headerSection: header
+    headerSection,
+    footerSection
   }
 }
 </script>
@@ -63,5 +67,32 @@ body {
 
 .contents {
   padding-top: 92px;
+}
+
+section {
+  padding: 30px 0;
+  box-sizing: border-box;
+}
+
+.page-enter {
+  transform: translate(-100px, 0);
+  opacity: 0;
+}
+.page-enter-to {
+  opacity: 1;
+}
+.page-enter-active {
+  transition: all 1s 0s ease;
+}
+.page-leave {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+.page-leave-to {
+  transform: translate(100px, 0);
+  opacity: 0;
+}
+.page-leave-active {
+  transition: all .5s 0s ease;
 }
 </style>

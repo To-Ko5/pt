@@ -9,6 +9,9 @@
     </section>
     <section class="works">
       <worksSection />
+    </section>
+    <section class="contact">
+      <contactSection />
     </section> 
   </div>
 </template>
@@ -18,6 +21,7 @@ import keyvisualSection from '~/components/keyvisual.vue'
 import aboutSection from '~/components/about.vue'
 import skillSection from '~/components/skill.vue'
 import worksSection from '~/components/works.vue'
+import contactSection from '~/components/contact.vue'
 
 export default {
   components: {
@@ -25,14 +29,11 @@ export default {
     aboutSection,
     skillSection,
     worksSection,
+    contactSection
   }
 }
-
 </script>
 
 <style>
-section {
-  padding: 30px 0;
-  box-sizing: border-box;
-}
+
 </style>
