@@ -5,9 +5,9 @@
 
             <nav>
                 <ul class="gnav">
-                    <li><nuxt-link :class="headerFixed" active-class="link-active" to="/" exact>Home</nuxt-link></li>
-                    <li><nuxt-link :class="headerFixed" active-class="link-active"  to="/works">Works</nuxt-link></li>
-                    <li><nuxt-link :class="headerFixed" active-class="link-active"  to="/contact">Contact</nuxt-link></li>
+                    <li><nuxt-link :class="gnavFixed"  active-class="link-active" to="/" exact>Home</nuxt-link></li>
+                    <li><nuxt-link :class="gnavFixed"  active-class="link-active"  to="/works">Works</nuxt-link></li>
+                    <li><nuxt-link :class="gnavFixed" active-class="link-active"  to="/contact">Contact</nuxt-link></li>
                 </ul>
             </nav>
         </div>
@@ -20,7 +20,9 @@ export default {
         return {
             headerHeight: '',
             windowHeight: '',
-            headerFixed: null
+            headerFixed: null,
+            gnavFixed: null,
+            nowFixed: false
         }
     },
     mounted() {
@@ -30,10 +32,26 @@ export default {
     methods: {
         scrollWindow(){
             this.windowHeight = window.scrollY
+
             if(this.headerHeight < this.windowHeight) {
-                this.headerFixed = 'headerFixed'
+                this.headerFixed = 'header-fixed'
+                this.gnavFixed = 'gnav-fixed'
+                this.nowFixed = false
             }else {
                 this.headerFixed = null
+                this.gnavFixed = null
+            }
+
+            if(this.nowFixed){
+                this.headerFixed = 'header-fixed'
+                this.gnavFixed = 'gnav-fixed'
+            }
+        }
+    },
+    watch: {
+        '$route'(){
+            if(this.headerFixed) {
+                this.nowFixed = true
             }
         }
     }
@@ -59,17 +77,28 @@ export default {
             & li:not(:last-of-type){
                 margin-right: 20px;
             }
+            & a:hover {
+                border-bottom: 2px solid black;
+                transition: .2s;
+            }
+            & a:hover.gnav-fixed {
+                border-bottom-color:#fff;
+            }
         }
     }
 }
 
-.headerFixed {
+.header-fixed {
+    transition: .3s;
     background: rgba(24, 24, 24, 0.8);
     color: #fff;
-    .link-active {
-        border-bottom-color: #fff;
-    }
 }
+
+
+.link-active.gnav-fixed {
+    border-bottom: 2px solid #fff; 
+}
+
 
 .link-active {
     border-bottom: 2px solid black; 

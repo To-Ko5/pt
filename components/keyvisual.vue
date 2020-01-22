@@ -1,6 +1,6 @@
 <template>
     <div class="keyvisual">
-        <p>Portfolio</p>
+        <p class="keyvisual-title">Portfolio</p>
     </div>
 </template>
 
@@ -8,14 +8,17 @@
 .keyvisual{
     height: calc(100vh - 91.11px);
     width: 100%;
-    background: no-repeat url("~@/assets/keyvisual.jpg") right 46% bottom/contain;
+    background: no-repeat url("~@/assets/keyvisual.jpg") right 46% bottom/cover;
+    background-attachment: fixed;
     position: relative;
-    & p {
+    .keyvisual-title {
         position: absolute;
         top: 10%;
         left: 50%;
         transform: translate(-50%,-10%);
-        font-size: 4rem;
+        font-size: 40rem;
     }
 }
 </style>
+
+
