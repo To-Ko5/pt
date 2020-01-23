@@ -3,7 +3,7 @@
     <transition>
         <div>
             <keyvisualSection />
-            <section id="works-area">ddddddddddddd</section>
+            <section id="works-area" class="section-area">ddddddddddddd</section>
 
             <p>gagagag</p>
             <p>agagaga</p>

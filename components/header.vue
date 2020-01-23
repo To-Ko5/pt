@@ -32,7 +32,6 @@ export default {
     methods: {
         scrollWindow(){
             this.windowHeight = window.scrollY
-
             if(this.headerHeight < this.windowHeight) {
                 this.headerFixed = 'header-fixed'
                 this.gnavFixed = 'gnav-fixed'
@@ -66,7 +65,7 @@ export default {
     box-shadow: 0 0 2px #333;
     position: fixed;
     width: 100%;
-    z-index: 9999;
+    z-index: 8000;
     .container {
         display: flex;
         justify-content: space-between;

@@ -69,9 +69,15 @@ body {
   padding-top: 92px;
 }
 
-section {
-  padding: 30px 0;
+.section-area {
+  padding: 50px 0;
   box-sizing: border-box;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 4rem;
 }
 
 .page-enter {
