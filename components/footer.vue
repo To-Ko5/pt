@@ -2,7 +2,7 @@
     <footer class="footer">
         <div class="container">
             <p><small>Tk Portfolio</small></p>
-            <p v-show="windowHeight > 800" class="top" @click="returnTop">top</p>
+            <p v-show="windowHeight > 100" class="top-btn" @click="returnTop">top</p>
         </div>
     </footer>
 </template>
@@ -39,14 +39,14 @@
  }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
     .footer {
         background: #efefef;
         text-align: center;
         padding: 20px 0;
     }
 
-    .top {
+    .top-btn {
         position: fixed;
         bottom: 0;
         right: 0;

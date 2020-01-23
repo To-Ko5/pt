@@ -8,15 +8,14 @@
 .keyvisual{
     height: calc(100vh - 91.11px);
     width: 100%;
-    background: no-repeat url("~@/assets/keyvisual.jpg") right 46% bottom/cover;
-    background-attachment: fixed;
+    background: no-repeat url("~@/assets/keyvisual.jpg") right 46% bottom/cover fixed;
     position: relative;
     .keyvisual-title {
         position: absolute;
         top: 10%;
         left: 50%;
         transform: translate(-50%,-10%);
-        font-size: 40rem;
+        font-size: 3rem;
     }
 }
 </style>

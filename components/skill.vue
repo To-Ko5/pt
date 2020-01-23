@@ -31,30 +31,17 @@
 </template>
 
 
-<script>
-export default {
-    data(){
-        return {
-            imgList: ['01','02','03','04'],
-            
-        }
-    }
-}
-</script>
 
-<style lang="scss">
-h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
+
+<style lang="scss" scoped>
+
 
 .skill-area {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    background: rgba(34, 26, 26, 0.144);
     .skill-content {
-        width: 30%;
+        width: 24%;
         padding: 20px;
         box-sizing: border-box;
         margin-bottom: 20px;
