@@ -3,29 +3,40 @@
         <div class="container">
             <h1>Tk Portfolio</h1>
 
-            <nav>
+            <nav v-if="windowWidth > 968">
                 <ul class="gnav">
                     <li><nuxt-link :class="gnavFixed"  active-class="link-active" to="/" exact>Home</nuxt-link></li>
                     <li><nuxt-link :class="gnavFixed"  active-class="link-active"  to="/works">Works</nuxt-link></li>
                     <li><nuxt-link :class="gnavFixed" active-class="link-active"  to="/contact">Contact</nuxt-link></li>
                 </ul>
             </nav>
+
+            <nav v-else class="sp-nav">
+                <spNav />
+            </nav>
         </div>
     </header>
 </template>
 
 <script>
+import spNav from '~/components/spnav.vue'
+
 export default {
+    components: {
+        spNav
+    },
     data() {
         return {
             headerHeight: '',
             windowHeight: '',
+            windowWidth: '',
             headerFixed: null,
             gnavFixed: null,
             nowFixed: false
         }
     },
     mounted() {
+        this.windowWidth = window.innerWidth
         this.headerHeight = this.$refs.header.clientHeight
         window.addEventListener('scroll', this.scrollWindow)
     },
@@ -101,6 +112,21 @@ export default {
 
 .link-active {
     border-bottom: 2px solid black; 
+}
+
+@media screen and (max-width: 968px) {
+    .header {
+        .container{
+            display: block;
+            text-align: center;
+        }
+    }
+}
+
+.sp-nav {
+    position: fixed;
+    top: 10px;
+    right: 10px;
 }
 
 </style>
