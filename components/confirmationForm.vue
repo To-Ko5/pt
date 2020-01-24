@@ -1,17 +1,17 @@
 <template>
         <form >
             <div class="form-outer">
-                <label for="confirmationForm-name">お名前</label><br>
-                <input id="confirmationForm-name" type="text" readonly v-model="inputContent.name">
+                <label for="confirmationForm-name">お名前</label>
+                <input id="confirmationForm-name" type="text" readonly  v-model="inputContent.name">
             </div>
 
             <div class="form-outer">
-                <label for="confirmationForm-email">アドレス</label><br>
+                <label for="confirmationForm-email">アドレス</label>
                 <input id="confirmationForm-email" type="email" readonly v-model="inputContent.email">
             </div>
 
             <div class="form-outer">
-                <label for="confirmationForm-text">お問い合わせ</label><br>
+                <label for="confirmationForm-text">お問い合わせ</label>
                 <textarea name="text" id="confirmationForm-text" cols="30" rows="10" readonly v-model="inputContent.text"></textarea>
             </div>
 
@@ -39,6 +39,9 @@ export default{
     margin-bottom: 30px;
     & label {
         display: block;
+        border-left: 5px solid #333;
+        padding-left: 10px;  
+        margin-bottom: 10px;
     }
     & input, textarea {
         width: 100%;
@@ -47,6 +50,7 @@ export default{
         outline: none;
         font-family: inherit;
         font-size: inherit;
+        text-indent: 1.4rem;
     }
     & input {
         line-height: 2rem;

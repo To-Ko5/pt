@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <h2>Contact</h2>
-        <p class="btn-area"><nuxt-link to="/contact/">お問い合わせはこちら</nuxt-link></p>
+        <p class="btn-area"><nuxt-link to="/contact/#form">お問い合わせはこちら</nuxt-link></p>
     </div>
 </template>
 

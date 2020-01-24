@@ -3,40 +3,32 @@
         <h2>works</h2>
         <div class="works-area">
             <div class="works-content">
-                <div class="img-effect">
-                    <img src="~/assets/login.PNG" >
-                </div>
-            </div>
-            <div class="works-content">
-                <div class="img-effect">
-                    <img src="~/assets/login.PNG" >
-                </div>
-            </div>
-            <div class="works-content">
-                <div class="img-effect">
-                    <img src="~/assets/login.PNG" >
-                </div>
-            </div>
-            <div class="works-content">
-                <div class="img-effect">
-                    <img src="~/assets/login.PNG" >
-                </div>
-            </div>
-            <div class="works-content">
-                <div class="img-effect">
-                    <img src="~/assets/login.PNG" >
-                </div>
-            </div>
-            <div class="works-content">
-                <div class="img-effect">
-                    <img src="~/assets/login.PNG" >
-                </div>
+                <nuxt-link to="dd">
+                    <div class="img-effect">
+                         <img src="~/assets/login.PNG">
+                    </div>
+                </nuxt-link>
             </div>
         </div>
 
-        <p><nuxt-link to="/works/#works-area">view more</nuxt-link></p>
+
+        <p class="view-more-btn-outer">
+            <nuxt-link to="/works/#works-area" class="view-more-btn">view more</nuxt-link>
+        </p>
     </div>
 </template>
+
+<script>
+
+import work1 from '~/components/work1.vue'
+import work2 from '~/components/work2.vue'
+
+export default {
+    components: {
+        work1
+    },
+}
+</script>
 
 
 <style lang="scss" scoped>
@@ -45,6 +37,7 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-bottom: 30px;
     .works-content {
         width: 30%;
         overflow: hidden;
@@ -80,4 +73,27 @@
         }
     }
 }
+
+
+.view-more-btn-outer{
+    width: 300px;
+    margin: 0 auto;
+    .view-more-btn {
+    display: block;
+    text-align: center;
+    border: 2px solid #9ec34b;
+    color: #9ec34b;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 20px 0;
+    border-radius: 4px;
+    transition: .4s;
+    &:hover{
+        background-color: #9ec34b;
+        border-color: #cbe585;
+        color: #FFF;
+        }
+    }
+} 
+
 </style>

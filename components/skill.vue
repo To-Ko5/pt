@@ -39,7 +39,7 @@
 .skill-area {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     .skill-content {
         width: 24%;
         padding: 20px;
@@ -52,7 +52,6 @@
                 height: 200px;
                 width: 200px;
                 margin: auto;
-                // opacity: 0.4;
              }
         }
     }

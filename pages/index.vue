@@ -36,7 +36,7 @@ export default {
 
 <style lang="scss" scoped>
 .about {
-  background: linear-gradient(rgba(249, 255, 255, 0.4),rgba(255, 230, 230, 0.4), rgba(255, 217, 210, 0.4)), no-repeat url('~@/assets/building.jpg') left top/cover fixed;
+  background: linear-gradient(rgba(249, 255, 255, 0.4),rgba(255, 230, 230, 0.4), rgba(255, 217, 210, 0.4)), no-repeat url('~@/assets/building.jpg') 90% top/cover fixed;
 }
 
 .skills {

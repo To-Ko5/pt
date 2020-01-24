@@ -3,7 +3,7 @@
         <div>
             <keyvisualSection />
             <section id="form" class="section-area form">
-            <formSection />
+                <formSection />
             </section>
         </div>
     </transition>
