@@ -1,50 +1,50 @@
 <template>
   <div>
-    <keyvisual-section />
+    <MainKeyvisualSection />
     <section class="section-area about"> 
-      <about-section />
+      <AboutSection />
     </section>
     <section class="section-area skills"> 
-      <skill-section />
+      <SkillSection />
     </section>
     <section class="section-area works">
-      <worksSection />
+      <WorksSection />
     </section>
     <section class="section-area contact">
-      <contactSection />
+      <ContactSection />
     </section> 
   </div>
 </template>
 
 <script>
-import keyvisualSection from '~/components/keyvisual.vue'
-import aboutSection from '~/components/about.vue'
-import skillSection from '~/components/skill.vue'
-import worksSection from '~/components/works.vue'
-import contactSection from '~/components/contact.vue'
+import MainKeyvisualSection from '~/components/MainKeyvisual.vue'
+import AboutSection from '~/components/About.vue'
+import SkillSection from '~/components/Skill.vue'
+import WorksSection from '~/components/Works.vue'
+import ContactSection from '~/components/Contact.vue'
 
 export default {
   components: {
-    keyvisualSection,
-    aboutSection,
-    skillSection,
-    worksSection,
-    contactSection
+    MainKeyvisualSection,
+    AboutSection,
+    SkillSection,
+    WorksSection,
+    ContactSection
   }
 }
 </script>
 
 <style lang="scss" scoped>
-.about {
-  background: linear-gradient(rgba(249, 255, 255, 0.4),rgba(255, 230, 230, 0.4), rgba(255, 217, 210, 0.4)), no-repeat url('~@/assets/building.jpg') 90% top/cover fixed;
-}
+
 
 .skills {
-  background:linear-gradient(rgba(255, 217, 210, 0.4),rgba(255, 241, 241, 0.4),rgba(249, 255, 255, 0.4)), no-repeat url('~@/assets/building2.jpg') center top/cover fixed;
+  background:linear-gradient(rgba(236, 255, 250, 0.4),rgba(248, 255, 255, 0.4),rgba(252, 255, 255, 0.4)),
+  no-repeat url('~@/assets/skillbg.jpg') center/cover;
 }
 
-.works {
-  background: linear-gradient(rgb(246, 255, 255),rgb(230, 255, 255), rgb(190, 236, 248));
+.contact {
+  background: #efefef;
 }
+
 </style>
 

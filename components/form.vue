@@ -1,37 +1,35 @@
 <template>
     <div class="container" >
         <h2>お問い合わせ</h2>
-        <transition>
-        <div class="modal" :class="modalOverlay" >
-            <div v-if="formFlagBefore" class="form-area">
-                <form @submit.prevent="confirmationSubmit">
-                    <div class="form-outer">
-                        <label for="name">お名前<span class="required-span">※必須</span></label>
-                        <input id="name" type="text" v-model="inputContent.name">
-                        <p class="error-message" v-if="errorMessageFlag.name">名前を入力してください</p>
-                    </div>
+        <div class="form-area">
+            <form @submit.prevent="confirmationSubmit">
+                <div class="form-outer">
+                    <label for="name">お名前<span class="required-span">※必須</span></label>
+                    <input id="name" type="text" v-model.trim="inputContent.name">
+                    <p class="error-message" v-if="errorMessageFlag.name">名前を入力してください</p>
+                </div>
 
-                    <div class="form-outer">
-                        <label for="email">アドレス<span class="required-span">※必須</span></label>
-                        <input id="email" type="email" v-model="inputContent.email" >
-                        <p class="error-message" v-if="errorMessageFlag.email">アドレスを入力してください。</p>
-                    </div>
+                <div class="form-outer">
+                    <label for="email">アドレス<span class="required-span">※必須</span></label>
+                    <input id="email" type="email" v-model.trim="inputContent.email" >
+                    <p class="error-message" v-if="errorMessageFlag.email">アドレスを入力してください。</p>
+                </div>
 
-                    <div class="form-outer">
-                        <label for="text">お問い合わせ<span class="required-span">※必須</span></label>
-                        <textarea name="text" id="text" cols="30" rows="10" v-model="inputContent.text" ></textarea>
-                        <p class="error-message" v-if="errorMessageFlag.text">お問い合わせ内容を入力してください</p>
-                    </div>
+                <div class="form-outer">
+                    <label for="text">お問い合わせ<span class="required-span">※必須</span></label>
+                    <textarea name="text" id="text" cols="30" rows="10" v-model.trim="inputContent.text" ></textarea>
+                    <p class="error-message" v-if="errorMessageFlag.text">お問い合わせ内容を入力してください</p>
+                </div>
 
-                    <p><button class="send-btn" type="submit" >送信内容の確認</button></p>
-                </form>
-            </div>
-
-            <div v-else class="confirmation-form-area">
-                <confirmationForm @returnForm="canselForm" :inputContent="inputContent" />
-            </div>
+                <p><button class="send-btn" type="submit">送信内容の確認</button></p>
+            </form>
         </div>
-        </transition>
+
+        <client-only>
+            <modal name="modal-content"  width="80%" height="auto" :scrollable="true">
+                <confirmationForm @returnForm="canselForm" :inputContent="inputContent" />
+            </modal>
+        </client-only>            
     </div>
 </template>
 
@@ -45,8 +43,6 @@ export default {
     },
     data(){
         return{
-            formFlagBefore: true, 
-            modalOverlay: null,
             inputContent: {
                 name: '',
                 email: '',
@@ -59,7 +55,6 @@ export default {
             }
         }
     },
-
     methods: {
         confirmationSubmit(){
             
@@ -83,18 +78,12 @@ export default {
             }else {
                 this.errorMessageFlag.text = false
             }            
-
-
-            this.formFlagBefore = !this.formFlagBefore
-            this.modalOverlay = 'modal-overlay'
+            this.$modal.show("modal-content");
         },
         canselForm(){
-            this.modalOverlay = null
-            this.formFlagBefore = true
-            this.$router.push('/contact/#form')
+            this.$modal.hide("modal-content");
         }
     }
-
 }
 
 </script>
@@ -145,38 +134,22 @@ export default {
 .send-btn {
     width: 100%;
     color: #fff;
-    background: black;
     padding: 20px 0;
     border: none;
     cursor: pointer;
     outline: none;
     appearance: none;
+    text-decoration: none;
+    background: #668ad8;
+    border-bottom: solid 4px #627295;
+    border-radius: 3px;
+    font-size: inherit;
+    font-family: inherit;
 }
-
-
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.945);
-    width: 100%;
-    height: 100%;
-    z-index: 9998;
-    .confirmation-form-area {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        width: 60%;
-        background: #fff;
-        padding: 40px;
-        box-sizing: border-box;
-        z-index: 9999;
-    }
-}
-
 
 .error-message  {
     color: rgb(255, 81, 81);
+    margin-top: 8px;
 }
+
 </style>

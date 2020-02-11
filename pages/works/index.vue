@@ -1,29 +1,22 @@
 <template>
-    
     <transition>
         <div>
-            <keyvisualSection />
-            <section id="works-area" class="section-area">ddddddddddddd</section>
-
-            <p>gagagag</p>
-            <p>agagaga</p>
+            <WorksKeyvisual />
+            <section id="works" class="section-area">
+                <WorksPage/>
+            </section>
         </div>
     </transition>
   
 </template>
 
 <script>
-import keyvisualSection from '~/components/keyvisual.vue'
+import WorksKeyvisual from '~/components/WorksKeyvisual.vue'
+import WorksPage from '~/components/WorksPage.vue'
 export default {
     components: {
-        keyvisualSection
+        WorksKeyvisual,
+        WorksPage
     }
 }
 </script>
-
-
-<style lang="scss" scoped>
-
-
-
-</style>

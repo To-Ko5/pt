@@ -1,7 +1,7 @@
 <template>
     <header class="header" ref='header' :class="headerFixed">
         <div class="container">
-            <h1>Tk Portfolio</h1>
+            <h1 class="main-title">TK Portfolio</h1>
 
             <nav v-if="windowWidth > 968">
                 <ul class="gnav">
@@ -11,20 +11,18 @@
                 </ul>
             </nav>
 
-            <nav v-else class="sp-nav">
-                <spNav />
-            </nav>
+            <div v-else class="sp-nav-btn" @click="spNavClick">
+                <i class="fas fa-times" v-if="spNavFlag"></i>
+                <i class="fas fa-bars" v-else></i>
+            </div>
         </div>
     </header>
 </template>
 
 <script>
-import spNav from '~/components/spnav.vue'
 
 export default {
-    components: {
-        spNav
-    },
+    props: ['spNavFlag'],
     data() {
         return {
             headerHeight: '',
@@ -32,7 +30,8 @@ export default {
             windowWidth: '',
             headerFixed: null,
             gnavFixed: null,
-            nowFixed: false
+            nowFixed: false,
+            spNavBtnState: true
         }
     },
     mounted() {
@@ -56,6 +55,9 @@ export default {
                 this.headerFixed = 'header-fixed'
                 this.gnavFixed = 'gnav-fixed'
             }
+        },
+        spNavClick() {
+            this.$emit("clickSpNav")
         }
     },
     watch: {
@@ -71,16 +73,19 @@ export default {
 <style lang="scss" scoped>
 
 .header {
-    padding: 30px 20px;
+    padding: 30px 0;
     box-sizing: border-box;
     box-shadow: 0 0 2px #333;
     position: fixed;
     width: 100%;
-    z-index: 8000;
+    z-index: 98;
     .container {
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
+        .main-title {
+            font-size: 4rem;
+        }
         .gnav {
             display: flex;
             justify-content: space-between;
@@ -98,9 +103,10 @@ export default {
     }
 }
 
+
 .header-fixed {
     transition: .3s;
-    background: rgba(24, 24, 24, 0.8);
+    background: rgba(24, 24, 24, 0.9);
     color: #fff;
 }
 
@@ -116,17 +122,22 @@ export default {
 
 @media screen and (max-width: 968px) {
     .header {
+        padding: 20px 0;
         .container{
             display: block;
             text-align: center;
+            .main-title {
+                font-size: 2.6rem;
+            }
         }
     }
 }
 
-.sp-nav {
-    position: fixed;
+.sp-nav-btn {
+    position: absolute;
     top: 10px;
     right: 10px;
+    font-size: 3rem;
 }
 
 </style>

@@ -1,8 +1,8 @@
 <template>
     <footer class="footer">
         <div class="container">
-            <p><small>Tk Portfolio</small></p>
-            <p v-show="windowHeight > 100" class="top-btn" @click="returnTop">top</p>
+            <p><small>TK Portfolio</small></p>
+            <p v-show="windowHeight > 100" class="top-btn" @click="returnTop">Top</p>
         </div>
     </footer>
 </template>
@@ -24,11 +24,11 @@
              this.windowHeight = window.scrollY
          },
          returnTop(){
-            const duration = 400;  // 移動速度（1秒で終了）
-            const interval = 10;    // 0.025秒ごとに移動
+            const duration = 400;  // 移動速度
+            const interval = 10;    // 移動間隔
             const step = -window.scrollY / Math.ceil(duration / interval); // 1回に移動する距離
             const timer = setInterval(() => {
-                    window.scrollBy(0, step);   // スクロール位置を移動
+                    window.scrollBy(0, step);   
                     if(window.scrollY <= 0) {
                         clearInterval(timer);
                     }
@@ -41,19 +41,22 @@
 
 <style lang="scss" scoped>
     .footer {
-        background: #efefef;
+        background: #000;
+        color: #fff;
         text-align: center;
-        padding: 20px 0;
+        padding: 30px 0;
     }
 
     .top-btn {
         position: fixed;
-        bottom: 0;
-        right: 0;
+        bottom: 10px;
+        right: 10px;
         width: 50px;
         height: 50px;
         line-height: 50px;
+        border-radius: 4px;
         background: #333;
         color: #fff;
+        cursor: pointer;
     }
 </style>

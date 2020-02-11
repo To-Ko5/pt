@@ -27,12 +27,13 @@ export default {
   ** Global CSS
   */
   css: [
- 
+    '~/assets/style/main.scss'
   ],
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
+    { src: '~/plugins/main.js', ssr: false }
   ],
   /*
   ** Nuxt.js dev-modules
@@ -52,7 +53,8 @@ export default {
     ** You can extend webpack config here
     */
     extend (config, ctx) {
-      
+      config.performance.maxAssetSize = 10000000;
     }
-  }
+  },
+  
 }

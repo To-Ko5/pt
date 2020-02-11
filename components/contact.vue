@@ -15,19 +15,19 @@
     text-align: center;
     & a {
         display: inline-block;
-        width: 200px;
+        width: 100%;
         text-align: center;
-        font-size: 16px;
         color: black;
         text-decoration: none;
         font-weight: bold;
-        padding: 12px 24px;
+        padding: 20px;
+        box-sizing: border-box;
         position: relative;
         border: 2px solid black;
         transition: .4s;
         &:hover{
             border: 2px solid transparent;
-            color: rgb(84, 84, 255);
+            color: rgb(19, 102, 255);
             &:after,&:before{
                  transform: scale(1);
             } 
@@ -45,17 +45,21 @@
             transition: .2s;
         }
         &:before {
-            border-bottom: 2px solid rgb(84, 84, 255);
-            border-left: 2px solid rgb(84, 84, 255);
+            border-bottom: 2px solid rgb(19, 102, 255);
+            border-left: 2px solid rgb(19, 102, 255);
             transform-origin: 100% 0%;
         }
         &:after {
-            border-top: 2px solid rgb(84, 84, 255);
-            border-right: 2px solid rgb(84, 84, 255);
+            border-top: 2px solid rgb(19, 102, 255);
+            border-right: 2px solid rgb(19, 102, 255);
             transform-origin: 0% 100%;
         }
     }
 }
 
-
+@media screen and (max-width: 768px) {
+  .btn-area {
+    width: 220px;
+  }
+}
 </style>

@@ -90,3 +90,6 @@ sw.*
 *.swp
 
 /assets/
+/components/works
+/components/ConfirmationForm.vue
+/dist/

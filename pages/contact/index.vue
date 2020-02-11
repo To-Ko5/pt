@@ -1,7 +1,7 @@
 <template>
     <transition>
         <div>
-            <keyvisualSection />
+            <ContactKeyvisual />
             <section id="form" class="section-area form">
                 <formSection />
             </section>
@@ -11,12 +11,18 @@
 </template>
 
 <script>
-import keyvisualSection from '~/components/keyvisual.vue'
+import ContactKeyvisual from '~/components/ContactKeyvisual.vue'
 import formSection from '~/components/form.vue'
 export default {
     components: {
-        keyvisualSection,
+        ContactKeyvisual,
         formSection
     }
 }
 </script>
+
+<style lang="scss" scoped>
+.form {
+    background: #fafafa;
+}
+</style>
