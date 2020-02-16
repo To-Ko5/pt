@@ -13,15 +13,15 @@
 
 
 <script>
-import HeaderSection from '~/components/Header.vue'
-import FooterSection from '~/components/Footer.vue'
-import Spnav from '~/components/Spnav.vue'
+import HeaderSection from "~/components/Header.vue";
+import FooterSection from "~/components/Footer.vue";
+import Spnav from "~/components/Spnav.vue";
 
 export default {
   data() {
-    return{
+    return {
       spNavFlag: false
-    }
+    };
   },
   components: {
     HeaderSection,
@@ -29,17 +29,17 @@ export default {
     FooterSection
   },
   methods: {
-    clickSpNav(){
-      this.spNavFlag = !this.spNavFlag
+    clickSpNav() {
+      this.spNavFlag = !this.spNavFlag;
     }
   },
   watch: {
-    '$route'(){
-        if(this.spNavFlag) {
-            this.spNavFlag = false
-        }
-     }
-  },
-}
+    $route() {
+      if (this.spNavFlag) {
+        this.spNavFlag = false;
+      }
+    }
+  }
+};
 </script>
 
