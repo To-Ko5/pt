@@ -5,14 +5,14 @@
       <p>前職では、ビルの設備管理の仕事をしておりました。</p>
       <p></p>
       <p>その後、職業訓練のWebサイト制作科に通い、HTML・CSS・JavaScript・PHP・MYSQL等を学びました。現在はSES企業に勤務しています。</p>
-      <p>Vue.js、Nuxt.js等を学習中でフロントエンドの分野に携わりたいと考えています。</p>
+      <p>Vue.js、Nuxt.js等を学習中で、フロントエンドの分野に携わりたいと考えています。</p>
       <p>こちらのポートフォリオサイトもNuxt.jsで作成しています。</p>
     </div>
     <div class="about-area-flex">
       <ul class="link-list">
         <li>
           <a href="https://github.com/To-Ko5" target="_blank">
-            <img class="skill-img" src="~/assets/skill_img/github.svg" alt="Github" />Githubアカウント
+            <img class="skill-img" src="~/assets/skill_img/github.svg" alt="Github" />GitHub
           </a>
         </li>
         <li>
@@ -40,7 +40,7 @@
 
 <style lang="scss" scoped>
 .about-content-area {
-  margin-bottom: 50px;
+  margin-bottom: 70px;
   & p {
     line-height: 1.7;
   }
@@ -53,10 +53,10 @@
 
 .link-list {
   & li {
-    font-size: 1.6rem;
     vertical-align: center;
     & a {
       text-decoration: underline;
+      font-size: 2rem;
     }
     .skill-img {
       width: 50px;
@@ -93,6 +93,11 @@
 
   .link-list {
     margin-bottom: 40px;
+    & li {
+      & a {
+        font-size: 1.6rem;
+      }
+    }
     & li:first-of-type {
       margin-bottom: 20px;
     }

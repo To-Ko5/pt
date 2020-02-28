@@ -1,8 +1,8 @@
 {
-  "name": "portfolio",
+  "name": "TKportfolio",
   "version": "1.0.0",
-  "description": "My swell Nuxt.js project",
-  "author": "To-Ka",
+  "description": "TK portfolio",
+  "author": "TK",
   "private": true,
   "scripts": {
     "dev": "nuxt",

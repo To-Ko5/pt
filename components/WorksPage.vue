@@ -2,6 +2,12 @@
   <div class="container">
     <h2>Works</h2>
     <div class="works-area">
+      <div class="works-content" @click="show('TkPortfolio')">
+        <div class="img-effect">
+          <img src="~/assets/web/ptweb.jpg" alt="webdesign01" />
+        </div>
+      </div>
+
       <div class="works-content" @click="show('Eternity')">
         <div class="img-effect">
           <img src="~/assets/web/webdesign01.jpg" alt="webdesign01" />
@@ -23,12 +29,6 @@
       <div class="works-content" @click="show('Masquerade')">
         <div class="img-effect">
           <img src="~/assets/web/webdesign04.jpg" alt="webdesign04" />
-        </div>
-      </div>
-
-      <div class="works-content" @click="show('BuildingMaintenance')">
-        <div class="img-effect">
-          <img src="~/assets/web/webdesign05.jpg" alt="webdesign05" />
         </div>
       </div>
 
@@ -80,6 +80,7 @@
 ​
 ​
 <script>
+import TkPortfolio from "~/components/works/TkPortfolio.vue";
 import Eternity from "~/components/works/Eternity.vue";
 import Suslon from "~/components/works/Suslon.vue";
 import Nemesis from "~/components/works/Nemesis.vue";
@@ -151,6 +152,7 @@ export default {
     };
   },
   components: {
+    TkPortfolio,
     Eternity,
     Suslon,
     Nemesis,
@@ -217,7 +219,7 @@ export default {
         color: #fff;
         font-size: 22px;
         text-shadow: 0 0 2px #000;
-        filter: blur(4px); /* ブラー効果 */
+        filter: blur(4px);
       }
     }
   }

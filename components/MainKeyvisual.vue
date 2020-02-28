@@ -8,7 +8,7 @@
 .keyvisual {
   height: calc(100vh - 100px);
   width: 100%;
-  background: no-repeat url("~@/assets/keyvisual.jpg") 45% bottom/cover;
+  background: no-repeat url("~@/assets/keyvisual2.jpg") 45% bottom/cover;
   position: relative;
   .keyvisual-title {
     position: absolute;

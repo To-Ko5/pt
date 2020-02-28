@@ -105,14 +105,14 @@
     }
     .skill-list {
       & li:not(:last-of-type) {
-        margin-bottom: 20px;
+        margin-bottom: 24px;
       }
       &:nth-of-type(1) {
-        margin-bottom: 20px;
+        margin-bottom: 24px;
       }
     }
     .skill-list:nth-of-type(2) {
-      margin-bottom: 20px;
+      margin-bottom: 24px;
     }
   }
   .slill-area-left,

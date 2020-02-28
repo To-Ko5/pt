@@ -72,7 +72,7 @@
 
   .work-img {
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
     text-align: center;
   }
 
