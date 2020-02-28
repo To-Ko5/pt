@@ -3,6 +3,7 @@
     <p class="works-img">
       <img src="~/assets/web/webdesign01.jpg" alt="ETERNITY" />
     </p>
+    <p class="works-title">ETERNITY</p>
     <p
       class="works-description"
     >架空のレストランのサイト。 落ち着きのある高級感のあるレストランを想定して作成。 Flexboxを使ったレスポンシブレイアウト。 ボタンはCSSアニメーションを使用。 画像はphotoshopにて加工。</p>

@@ -3,7 +3,8 @@
     <p class="works-img">
       <img src="~/assets/web/webdesign04.jpg" alt="MASQUERADE" />
     </p>
-    <p class="works-description"></p>
+    <p class="works-title">MASQUERADE</p>
+    <p class="works-description">ファッション系のLP。photoshopにて加工。Flexboxやpositionを使いレイアウト。レスポンシブにも対応。</p>
     <p class="view-more-btn-outer">
       <a
         class="view-more-btn"

@@ -3,6 +3,7 @@
     <p class="works-img">
       <img src="~/assets/web/webdesign02.jpg" alt="Suslon" />
     </p>
+    <p class="works-title">SusIon</p>
     <p
       class="works-description"
     >架空のコーポレートサイト。Flexboxを使ったレスポンシブレイアウトでページ内リンクでスムーズスクロールにしている。jQueryにてタブで切り替えられるメニューを取り入れた。</p>
