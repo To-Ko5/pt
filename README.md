@@ -1,6 +1,13 @@
 # portfolio
+  Nuxt.jsを利用したポートフォリオサイトになります。
+  過去に製作した作品をまとめています。
 
-> My swell Nuxt.js project
+## 使用技術
+  Nuxt.js
+
+## 使用ライブラリ
+  vue-image-lightbox
+  vue-js-modal
 
 ## Build Setup
 
